@@ -1,0 +1,18 @@
+import java.util.HashSet;
+
+public class Testing {
+
+	public static void main(String[] args) {
+		int[] arr = { 1, 2, 3, 4, 1, 2, 3 };
+		HashSet<Integer> hs = removeDuplicateValues(arr);
+		hs.forEach(value -> System.out.println(value));
+	}
+
+	private static HashSet<Integer> removeDuplicateValues(int[] in) {
+		HashSet<Integer> unique = new HashSet<Integer>();
+		for (int i : in) {
+			unique.add(i);
+		}
+		return unique;
+	}
+}
